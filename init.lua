@@ -229,6 +229,17 @@ vim.opt.rtp:prepend(lazypath)
 require('lazy').setup({
   -- NOTE: Plugins can be added with a link (or for a github repo: 'owner/repo' link).
   'tpope/vim-sleuth', -- Detect tabstop and shiftwidth automatically
+  { 'tpope/vim-bundler', ft = { 'ruby' } },
+  { 'tpope/vim-endwise', ft = { 'ruby' } },
+  { 'vim-ruby/vim-ruby', event = { 'BufReadPost', 'BufNewFile' } },
+  {
+    'tpope/vim-rails',
+    keys = {
+      { '<leader>s', ':A<cr>', desc = 'Toggle test and code files' },
+    },
+  },
+
+  'nvim-tree/nvim-tree.lua',
 
   -- NOTE: Plugins can also be added by using a table,
   -- with the first argument being the link and the following
@@ -616,6 +627,8 @@ require('lazy').setup({
       --  - settings (table): Override the default settings passed when initializing the server.
       --        For example, to see the options for `lua_ls`, you could go to: https://luals.github.io/wiki/settings/
       local servers = {
+        ruby_lsp = {},
+        sorbet = {},
         -- clangd = {},
         -- gopls = {},
         -- pyright = {},
@@ -902,7 +915,26 @@ require('lazy').setup({
     main = 'nvim-treesitter.configs', -- Sets main module to use for opts
     -- [[ Configure Treesitter ]] See `:help nvim-treesitter`
     opts = {
-      ensure_installed = { 'bash', 'c', 'diff', 'html', 'lua', 'luadoc', 'markdown', 'markdown_inline', 'query', 'vim', 'vimdoc' },
+      ensure_installed = {
+        'elixir',
+        'eex',
+        'heex',
+        'erlang',
+        'ruby',
+        'elm',
+        'javascript',
+        'bash',
+        'c',
+        'diff',
+        'html',
+        'lua',
+        'luadoc',
+        'markdown',
+        'markdown_inline',
+        'query',
+        'vim',
+        'vimdoc',
+      },
       -- Autoinstall languages that are not installed
       auto_install = true,
       highlight = {
