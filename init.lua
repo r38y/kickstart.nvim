@@ -85,8 +85,8 @@ P.S. You can delete this when you're done too. It's your config now! :)
 --]]
 
 -- disable netrw at the very start of your init.lua
--- vim.g.loaded_netrw = 1
--- vim.g.loaded_netrwPlugin = 1
+vim.g.loaded_netrw = 1
+vim.g.loaded_netrwPlugin = 1
 
 -- Set <space> as the leader key
 -- See `:help mapleader`
@@ -244,8 +244,6 @@ require('lazy').setup({
       { '<leader>s', ':A<cr>', desc = 'Toggle test and code files' },
     },
   },
-
-  'nvim-tree/nvim-tree.lua',
 
   -- NOTE: Plugins can also be added by using a table,
   -- with the first argument being the link and the following
