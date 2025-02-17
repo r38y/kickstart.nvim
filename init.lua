@@ -235,8 +235,12 @@ vim.opt.rtp:prepend(lazypath)
 require('lazy').setup({
   -- NOTE: Plugins can be added with a link (or for a github repo: 'owner/repo' link).
   'tpope/vim-sleuth', -- Detect tabstop and shiftwidth automatically
+  'tpope/vim-rails',
   { 'tpope/vim-bundler', ft = { 'ruby' } },
-  { 'tpope/vim-endwise', ft = { 'ruby' } },
+  { 'tpope/vim-rake' },
+  { 'tpope/vim-fugitive' },
+  { 'tpope/vim-endwise' },
+  { 'tpope/vim-surround' },
   { 'vim-ruby/vim-ruby', event = { 'BufReadPost', 'BufNewFile' } },
   {
     'tpope/vim-rails',
