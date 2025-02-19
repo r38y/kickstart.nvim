@@ -110,6 +110,8 @@ vim.opt.number = true
 --  Experiment for yourself to see if you like it!
 vim.opt.relativenumber = true
 
+vim.opt.wrap = false
+
 -- Enable mouse mode, can be useful for resizing splits for example!
 vim.opt.mouse = 'a'
 
@@ -237,7 +239,7 @@ require('lazy').setup({
   'tpope/vim-sleuth', -- Detect tabstop and shiftwidth automatically
   'tpope/vim-rails',
   { 'tpope/vim-bundler', ft = { 'ruby' } },
-  { 'tpope/vim-rake' },
+  { 'tpope/vim-rake', ft = { 'ruby' } },
   { 'tpope/vim-fugitive' },
   { 'tpope/vim-endwise' },
   -- { 'tpope/vim-surround' },
@@ -950,6 +952,8 @@ require('lazy').setup({
         'query',
         'vim',
         'vimdoc',
+        'toml',
+        'dockerfile',
       },
       -- Autoinstall languages that are not installed
       auto_install = true,
