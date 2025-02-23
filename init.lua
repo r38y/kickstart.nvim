@@ -642,8 +642,18 @@ require('lazy').setup({
         ruby_lsp = {},
         sorbet = {},
         rubocop = {},
-        elixirls = {},
-        tailwindcss = {},
+        elixirls = {
+          cmd = { '/opt/homebrew/bin/elixir-ls' },
+        },
+        tailwindcss = {
+          init_options = {
+            userLanguages = {
+              elixir = 'html-eex',
+              eelixir = 'html-eex',
+              heex = 'html-eex',
+            },
+          },
+        },
         cssls = {},
         yamlls = {},
         jedi_language_server = {},
