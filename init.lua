@@ -657,6 +657,7 @@ require('lazy').setup({
         cssls = {},
         yamlls = {},
         jedi_language_server = {},
+        lemminx = {},
 
         -- clangd = {},
         -- gopls = {},
