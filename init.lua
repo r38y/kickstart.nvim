@@ -162,7 +162,8 @@ vim.opt.inccommand = 'split'
 vim.opt.cursorline = true
 
 -- Minimal number of screen lines to keep above and below the cursor.
-vim.opt.scrolloff = 10
+-- Setting it to a high number will center cursor in page
+vim.opt.scrolloff = 999
 
 -- [[ Basic Keymaps ]]
 --  See `:help vim.keymap.set()`
