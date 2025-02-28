@@ -22,7 +22,12 @@ return {
     'nvim-tree/nvim-web-devicons',
   },
   config = function()
-    require('nvim-tree').setup {}
+    require('nvim-tree').setup {
+      hijack_directories = {
+        enable = false,
+        auto_open = false,
+      },
+    }
   end,
   -- on_attach = my_on_attach,
 }
