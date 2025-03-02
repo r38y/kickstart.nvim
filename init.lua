@@ -112,8 +112,8 @@ require('lazy').setup({
   'tpope/vim-rails',
   { 'tpope/vim-bundler', ft = { 'ruby' } },
   { 'tpope/vim-rake', ft = { 'ruby' } },
-  { 'tpope/vim-fugitive' },
-  { 'tpope/vim-endwise' },
+  'tpope/vim-fugitive',
+  'tpope/vim-endwise',
   -- { 'tpope/vim-surround' },
   { 'vim-ruby/vim-ruby', event = { 'BufReadPost', 'BufNewFile' } },
   {
