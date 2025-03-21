@@ -29,6 +29,7 @@ return {
       },
     }
 
+    -- https://medium.com/@jogarcia/highlight-file-in-nvim-tree-when-entering-buffers-1a018803e1a4
     local api = require 'nvim-tree.api'
     vim.api.nvim_create_autocmd('BufEnter', {
       callback = function()
