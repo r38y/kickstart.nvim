@@ -28,6 +28,16 @@ return {
         auto_open = false,
       },
     }
+
+    local api = require 'nvim-tree.api'
+    vim.api.nvim_create_autocmd('BufEnter', {
+      callback = function()
+        if vim.fn.bufname() == 'NvimTree_1' then
+          return
+        end
+        api.tree.find_file { buf = vim.fn.bufnr() }
+      end,
+    })
   end,
   -- on_attach = my_on_attach,
 }
