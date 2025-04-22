@@ -284,6 +284,7 @@ require('lazy').setup({
             '%.DS_Store',
             'vendor/assets/bower_components/',
             'spoom_data/',
+            'sorbet/',
           },
           --   mappings = {
           --     i = { ['<c-enter>'] = 'to_fuzzy_refine' },
